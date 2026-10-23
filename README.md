@@ -14,6 +14,7 @@ After the integration is complete, run the cleanup script to remove the temporar
 |---|---|
 | `create_user_sts.sh` | Creates an IAM user and administrator role, generates user access keys, and configures AWS CLI profiles to assume the role. |
 | `delete_user_sts.sh` | Removes the IAM user and role created by the setup script, along with their associated keys and policies. |
+| `tf_inventory.sh`    | Removes the IAM user and role created by the setup script, along with their associated keys and policies. |
 
 ### Prerequisites
 
@@ -56,3 +57,12 @@ chmod +x delete_user_sts.sh
 ```
 
 Remove only the setup resources; retain the roles and resources required by the FortiCNAPP integration.
+
+**TF Inventory integration:**
+
+Using your original administrator credentials, run:
+
+```bash
+chmod +x tf_inventory.sh
+./tf_inventory.sh
+```
